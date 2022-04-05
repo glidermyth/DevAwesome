@@ -3,6 +3,7 @@ import developer from '../images/developer.png';
 import sun from '../images/sun-icon.png';
 import moon from '../images/moon.png';
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 const Navbar = () =>{
 
@@ -28,10 +29,10 @@ const Navbar = () =>{
                 </div>
                 <div className="links">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">ContactUs</a></li>
-                        <li><a href="#">SignUp</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/contact">ContactUs</Link></li>
+                        <li><Link to="/signup">SignUp</Link></li>
                         <li><img src={logoImg} alt='dark-mode' onClick={handleDarkMode}/></li>
                     </ul>
                 </div>

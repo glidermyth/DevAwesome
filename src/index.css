@@ -528,3 +528,82 @@ nav{
 }
 
 /* Login style ends here*/
+
+/* Services style starts here*/
+
+.Services{
+	height:88%;
+}
+.servicesBody{
+	height:100%;
+	width:100%;
+	padding:1rem;
+	display: flex;
+	/* align-items: center; */
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+/* Services style starts here*/
+
+/* ServicesCard style starts here*/
+
+.servicesCard{
+	position:relative;
+	font-family: "Fira Code";
+
+}
+.servicesCardBody{
+	width:280px;
+	height:260px;
+	background: #EDF5FC;
+	border-radius:10px;
+	box-shadow: 4px 4px 10px #bebebe,
+				-4px -4px 10px #fff;
+}
+.servicesCardImage{
+	width:100%;
+	height:70%;
+	border-radius:10px 10px 0 0;
+}
+.servicesCardImage>img{
+	width:100%;
+	height:100%;
+	border-radius:10px 10px 0 0;
+}
+.servicesCardHover{
+	width:280px;
+	height:260px;
+	background: #9FB4FF;
+	border-radius:10px;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity: 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition:opacity 300ms;
+}
+.servicesCardHover:hover{
+	opacity:0.7;
+}
+.servicesCardHover>img{
+	width: 50px;
+	height: 50px;
+}
+.servicesCardText{
+	height:30%;
+	width:100%;
+	color:#38023B;
+}
+.servicesCardText{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+/* ServicesCard style starts here*/
