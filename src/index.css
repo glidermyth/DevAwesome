@@ -1,13 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	height:100%;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'Sora',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+#root{
+	height:100%;
+}
+/* Navbar Styles start here */
+nav{
+	width: 100%;
+	height: 12vh;
+	display: flex;
+	padding: 0.7rem;
+	justify-content: space-around;
+}
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#logo_text{
+	color: #22577E;
+  font-size: 1.4rem;
+}
+.links{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.links>ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+  	align-items: center;
+	list-style-type: none;
+}
+.links>ul>li>a{
+	text-decoration: none;
+	color: #22577E;
+	font-size: 1.2rem;
+}
+.links>ul>li>a:hover{
+	border-bottom: 2px solid #22577E;
+}
+.links>ul>li>img{
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+/* Navbar Styles end here */
+
+/* MainBody style start here*/
+.main_body{
+	width: 100%;
+	/* height: 88vh; */
+}
+.intro{
+	width: 100%;
+	height: 50%;
+	padding: 4rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.intro>span{
+	font-size: 1.4rem;
+	color: #5584AC;
+}
+#intro_price_text{
+	color: #22577E;
+	text-decoration: underline;
+	text-decoration-color: #22577E;
+	font-weight: 600;
+}
+.intro>img{
+	width: 30%;
+	height: 30%;
+}
+.fancy_text{
+	width:100%;
+	margin-top:1rem;
+	font-family: 'Dancing Script', cursive;
+	font-size:3.5em;
+	color:#9254C8;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.price-section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top:4rem;
+}
+.price-section-text{
+	display:flex;
+	margin:2rem;
+	align-items: center;
+}
+.price-section-text>p{
+	font-size: 52px;
+	font-family: 'Dancing Script', cursive;
+	color:#9900F0;
+}
+.price-section-cards{
+	display: flex;
+	justify-content: space-around;
+}
+.LowerBody-section{
+	margin-top:6rem;
+}
+/* MainBody style end here*/
+/* Card style start here*/
+.card{
+	background-color: #F7F7F7;
+	width:330px;
+	height:560px;
+	margin: 1rem 1rem;
+	border-radius:15px;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 10px 10px 40px #bebebe,
+				-10px -10px 40px #fff;
+	transform:scale(1);
+	transition:transform 0.5s;
+}
+.card:hover{
+	transform:scale(1.05);
+}
+.card>p{
+	font-size:28px;
+	text-decoration: underline;
+	color:#247881;
+	font-weight: 700;
+}
+.card>.price{
+	width:70%;
+	display:flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-weight: 400;
+}
+.price-text>p:first-child{
+	font-size:14px;
+	color:#FD5D5D;
+	text-decoration: line-through;
+}
+.price-text>p:last-child{
+	font-size:26px;
+	color:#30AADD;
+}
+.card>hr{
+	width:50%;
+}
+.card-features>ul{
+	font-size:22px;
+	color:#43919B;
+}
+.card>button{
+	background-color: #30AADD;
+	color:white;
+	width:146px;
+	height:51px;
+	font-size:22px;
+	border:none;
+	outline:none;
+	border-radius: 5px;
+	cursor:pointer;
+}
+/* Card style end here*/
+
+/* LowerBody style starts here*/
+.websiteBuilder{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+.websiteBuilder-text{
+	font-family: 'Lobster',cursive;
+	font-size:52px;
+	color:#247881;
+	text-align: center;
+}
+.websiteBuilder-text span{
+	position: relative;
+}
+.websiteBuilder-text button{
+	font-family: 'Lobster',cursive;
+	background-color: #30AADD;
+	color:white;
+	width:146px;
+	height:51px;
+	font-size:26px;
+	border:none;
+	outline:none;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.websiteBuilder-text img{
+	transform: rotate(-90deg);
+	position:absolute;
+	left:10rem;
+	height:80px;
+	width:80px;
+}
+.websiteBuilder-image{
+	width:700px;
+	height:400px;
+}
+.footer{
+	width:100%;
+	background-color: #247881;
+	color:#fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.footer-text{
+	padding:1rem;
+	margin:1rem;
+}
+.footer-comp-text{
+	font-size: 22px;
+	font-weight: 700;
+	text-decoration: underline;
+}
+.footer-links{
+	width:50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.footer-links img{
+	background-color: white;
+	border-radius: 0.5rem;
+	cursor:pointer;
+}
+/* LowerBody style ends here*/
+
+/* contactUs style starts here*/
+.contactUs{
+	height:88%;
+	padding-top:4rem;
+}
+.contactUsBody{
+	display:flex;
+	align-items: center;
+	justify-content: space-around;
+	height:70%;
+}
+.contactUs-form{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width:44%;
+	height:100%;
+}
+.contactUs-form>span{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	width:100%;
+}
+.contactUs-form>span>img{
+	width:40px;
+	height:40px;
+}
+.contactUs-form>span>label{
+	font-size: 32px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+.contactUs-form>span>input{
+	width:450px;
+	height:56px;
+	background-color: #F7F7F7;
+	border:2px solid #219F94;
+	border-radius: 7px;
+	padding:0.5rem;
+	font-size:1.5rem;
+}
+.contactUs-submit-btn{
+	width:110px;
+	height:45px;
+	background-color: #fff;
+	color: #000;
+	border-radius: 12px;
+	border:2px solid #219F94;
+	outline:#219F94;
+	font-size:20px;
+	cursor: pointer;
+	box-shadow:none;
+	transition:box-shadow 0.3s;
+}
+.contactUs-submit-btn:hover{
+	box-shadow: 3px 3px 10px #30c0b4,
+				-3px -3px 10px #30c0b4;
+	outline:#219F94;
+	background-color: #219F94;
+	color:#fff;
+
+}
+.contactUs-image>img{
+	width:600px;
+	height:420px;
+	border:1px solid #219F94;
+	border-radius:10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* contactUs style ends here */
+/* SignUp style starts here */
+
+.signUp{
+	height:88%;
 }
+.signUpBody{
+	height:100%;
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.signUpForm{
+	position:relative;
+}
+.circle1{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	background-color: #82B1FF;
+	position:absolute;
+	top:-16%;
+	left:-16%;
+	z-index: -1;
+}
+.circle2{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	background-color: #6B4DFD;
+	z-index: -1;
+	position:absolute;
+	bottom:-16%;
+	right:-16%;
+}
+.signUpFormBody{
+	font-family:"Fira Code";
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: #F7F7F7;
+	box-shadow: 8px 8px 16px #bebebe,
+				-8px -8px 16px #fff;
+	width:420px;
+	height:400px;
+	border-radius:10px;
+	z-index: 2;
+}
+.signUpFormBody>p{
+	font-size:22px;
+	font-weight:600;
+	text-decoration:underline;
+}
+.signUpFormBody>span{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	height:12%;
+	width:70%;
+}
+.signUpFormBody>span>label{
+	font-size: 1.05rem;
+}
+.signUpFormBody>span>input{
+	width:68%;
+	height:75%;
+	border:2px solid #82B1FF;
+	box-shadow: 2px 2px 6px #bebebe,
+				-2px -2px 6px #bebebe;
+	border-radius:5px;
+	font-size:1.15rem;
+	padding:4px;
+	outline: none;
+}
+.signUpBtn{
+	width:75px;
+	height:35px;
+	font-size: 1rem;
+	border:2px solid #9EDE73;
+	background: #fff;
+	color:#000;
+	border-radius:4px;
+	cursor: pointer;
+	box-shadow: none;
+	transition:all 0.5s;
+}
+.signUpBtn:hover{
+	background:#9EDE73;
+	border:1px solid #fff;
+	color:#fff;
+	box-shadow: 2px 2px 6px #9EDE73,
+				-2px -2px 6px #9EDE73;
+}
+.signUpImage>img{
+	width:600px;
+	height:350px;
+}
+
+/* SignUp style ends here */
+/* Login style starts here*/
+
+.login{
+	height:88%;
+}
+.loginBody{
+	height:100%;
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.loginForm{
+	position:relative;
+}
+.loginCircle1{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	background-color: #D2F091;
+	position:absolute;
+	top:-20%;
+	left:-18%;
+	z-index: -1;
+}
+.loginCircle2{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	background-color: #998CEB;
+	z-index: -1;
+	position:absolute;
+	bottom:-20%;
+	right:-18%;
+}
+.loginFormBody{
+	font-family:"Fira Code";
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: #F7F7F7;
+	box-shadow: 8px 8px 16px #bebebe,
+				-8px -8px 16px #fff;
+	width:400px;
+	height:300px;
+	border-radius:10px;
+	z-index: 2;
+}
+.loginFormBody>p{
+	font-size:22px;
+	font-weight:600;
+	text-decoration:underline;
+}
+.loginFormBody>span{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	height:12%;
+	width:70%;
+}
+.loginFormBody>span>label{
+	font-size: 1.05rem;
+}
+.loginFormBody>span>input{
+	width:68%;
+	height:75%;
+	border:2px solid #82B1FF;
+	box-shadow: 2px 2px 6px #bebebe,
+				-2px -2px 6px #bebebe;
+	border-radius:5px;
+	font-size:1.15rem;
+	padding:6px;
+	outline: none;
+}
+.loginBtn{
+	width:75px;
+	height:35px;
+	font-size: 1rem;
+	border:2px solid #9EDE73;
+	background: #fff;
+	color:#000;
+	border-radius:4px;
+	cursor: pointer;
+	box-shadow: none;
+	transition:all 0.5s;
+}
+.loginBtn:hover{
+	background:#9EDE73;
+	border:1px solid #fff;
+	color:#fff;
+	box-shadow: 2px 2px 6px #9EDE73,
+				-2px -2px 6px #9EDE73;
+}
+.loginImage>img{
+	width:500px;
+	height:320px;
+}
+
+/* Login style ends here*/
