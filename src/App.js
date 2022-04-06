@@ -6,17 +6,24 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Services from './components/Services';
 import {Routes,Route} from 'react-router-dom';
+import {useState} from 'react';
 
 function App() {
+
+  const [darkMode,setDarkMode] = useState(false);
+  const darkModeHandler = (val) =>{
+      setDarkMode(val);
+  }
+
   return (
     <>
-      <Navbar/>
+      <Navbar darkModeHandler={darkModeHandler} darkMode={darkMode}/>
       <Routes>
-        <Route path="/contact" element={<ContactUs/>} />
-        <Route path="/signup" element={<SignUp/>} />
-        <Route path="/services" element={<Services/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/" element={<MainBody/>} />
+        <Route path="/contact" element={<ContactUs darkMode={darkMode}/>} />
+        <Route path="/signup" element={<SignUp darkMode={darkMode}/>} />
+        <Route path="/services" element={<Services darkMode={darkMode}/>} />
+        <Route path="/login" element={<Login darkMode={darkMode}/>} />
+        <Route path="/" element={<MainBody darkMode={darkMode}/>} />
       </Routes>
     </>
   );

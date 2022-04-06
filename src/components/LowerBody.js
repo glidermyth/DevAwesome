@@ -5,11 +5,11 @@ import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import twitter from '../images/twitter.png';
 
-const LowerBody = () =>{
+const LowerBody = (props) =>{
     return(
         <div className="lowerBody">
             <div className='websiteBuilder'>
-                <div className="websiteBuilder-text">
+                <div className={props.darkMode?"websiteBuilder-text websiteBuilder-p-light":"websiteBuilder-text websiteBuilder-p-dark"}>
                     <p>You can also checkout our website builders</p>
                     <p>for hastle free website development</p>
                     <p>and</p>

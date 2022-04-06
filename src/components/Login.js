@@ -1,20 +1,20 @@
 import React from 'react';
 import securityImg from '../images/security.png';
 
-const SignUp = () =>{
+const SignUp = (props) =>{
     return(
         <div className="login">
-            <div className='loginBody'>
+            <div className={props.darkMode?'loginBody loginBodyDark':'loginBody loginBodyLight'}>
                 <div className='loginForm'>
                     <div className='loginCircle1'></div>
-                    <div className='loginFormBody'>
-                        <p>Login</p>
+                    <div className={props.darkMode?'loginFormBody loginFormBodyDark':'loginFormBody loginFormBodyLight'}>
+                        <p className={props.darkMode?"loginTextLight":"loginTextDark"}>Login</p>
                         <span>
-                            <label htmlFor='email'>Email</label>
+                            <label htmlFor='email' className={props.darkMode?"loginTextLight":"loginTextDark"}>Email</label>
                             <input type="text" name="email" />
                         </span>
                         <span>
-                            <label htmlFor='password'>Password</label>
+                            <label htmlFor='password' className={props.darkMode?"loginTextLight":"loginTextDark"}>Password</label>
                             <input type="password" name="password" />
                         </span>
                         <button className='loginBtn'>Login</button>

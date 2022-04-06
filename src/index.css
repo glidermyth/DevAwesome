@@ -20,7 +20,8 @@ body {
 #root{
 	height:100%;
 }
-/* Navbar Styles start here */
+/*========== Navbar Styles start here ==========*/
+
 nav{
 	width: 100%;
 	height: 12vh;
@@ -33,10 +34,7 @@ nav{
 	justify-content: center;
 	align-items: center;
 }
-#logo_text{
-	color: #22577E;
-  font-size: 1.4rem;
-}
+
 .links{
 	width: 50%;
 	display: flex;
@@ -50,26 +48,57 @@ nav{
   	align-items: center;
 	list-style-type: none;
 }
+
 .links>ul>li>a{
 	text-decoration: none;
-	color: #22577E;
 	font-size: 1.2rem;
 }
-.links>ul>li>a:hover{
+/* .links>ul>li>a:hover{
 	border-bottom: 2px solid #22577E;
-}
+} */
 .links>ul>li>img{
   height: 2rem;
   width: 2rem;
   cursor: pointer;
 }
-/* Navbar Styles end here */
 
-/* MainBody style start here*/
+/*==========================================
+	Navbar Dark Mode
+==========================================*/
+.navbarDarkMode{
+	background-color: #1A1A40;
+}
+.liDarkMode>a{
+	color:#EEEEEE;
+}
+.liDarkMode>a:hover{
+	border-bottom: 2px solid #EEEEEE;
+}
+.liLightMode>a{
+	color: #22577E;
+}
+.liLightMode>a:hover{
+	border-bottom: 2px solid #22577E;
+}
+#logo_textLight{
+	color: #22577E;
+  font-size: 1.4rem;
+}
+#logo_textDark{
+	color: #EEEEEE;
+  font-size: 1.4rem;
+}
+/*========== Navbar Styles end here ==========*/
+
+/*========== MainBody style start here ==========*/
+/*==========================================
+	MainBody Light Mode
+==========================================*/
 .main_body{
 	width: 100%;
 	/* height: 88vh; */
 }
+
 .intro{
 	width: 100%;
 	height: 50%;
@@ -78,15 +107,17 @@ nav{
 	justify-content: space-around;
 	align-items: center;
 }
-.intro>span{
+.introTestDark{
 	font-size: 1.4rem;
 	color: #5584AC;
 }
 #intro_price_text{
-	color: #22577E;
 	text-decoration: underline;
-	text-decoration-color: #22577E;
 	font-weight: 600;
+}
+.introPriceTextDark{
+	color: #22577E;
+	text-decoration-color: #22577E;
 }
 .intro>img{
 	width: 30%;
@@ -97,10 +128,12 @@ nav{
 	margin-top:1rem;
 	font-family: 'Dancing Script', cursive;
 	font-size:3.5em;
-	color:#9254C8;
 	display:flex;
 	align-items: center;
 	justify-content: center;
+}
+.fancy_textDark{
+	color:#9254C8;
 }
 .price-section{
 	display: flex;
@@ -113,7 +146,7 @@ nav{
 	margin:2rem;
 	align-items: center;
 }
-.price-section-text>p{
+.price-section-text-dark>p{
 	font-size: 52px;
 	font-family: 'Dancing Script', cursive;
 	color:#9900F0;
@@ -125,10 +158,39 @@ nav{
 .LowerBody-section{
 	margin-top:6rem;
 }
-/* MainBody style end here*/
-/* Card style start here*/
-.card{
+/*==========================================
+	MainBody Dark Mode
+==========================================*/
+.introTestLight{
+	font-size: 1.4rem;
+	color: #EEEEEE;
+}
+.introPriceTextLight{
+	color: #EEEEEE;
+	text-decoration-color: #EEEEEE;
+}
+.main_bodyDark{
+	background-color: #1A1A40;
+}
+.fancy_textLight{
+	color:#EEEEEE;
+}
+.price-section-text-light>p{
+	font-size: 52px;
+	font-family: 'Dancing Script', cursive;
+	color:#EEEEEE;
+}
+/*========== MainBody style end here ==========*/
+/*========== Card style start here ==========*/
+/*==========================================
+	Card Light Mode
+==========================================*/
+
+.cardDarkLight{
 	background-color: #F7F7F7;
+}
+.card{
+	/* background-color: #F7F7F7; */
 	width:330px;
 	height:560px;
 	margin: 1rem 1rem;
@@ -148,8 +210,10 @@ nav{
 .card>p{
 	font-size:28px;
 	text-decoration: underline;
-	color:#247881;
 	font-weight: 700;
+}
+.card-p-dark{
+	color:#247881;
 }
 .card>.price{
 	width:70%;
@@ -172,6 +236,8 @@ nav{
 }
 .card-features>ul{
 	font-size:22px;
+}
+.card-features-dark{
 	color:#43919B;
 }
 .card>button{
@@ -185,9 +251,24 @@ nav{
 	border-radius: 5px;
 	cursor:pointer;
 }
-/* Card style end here*/
+/*==========================================
+	Card Dark Mode
+==========================================*/
+.cardDarkMode{
+	background-color: #7A0BC0;
+}
+.card-features-light{
+	color: #EEEEEE;
+}
+.card-p-light{
+	color:#EEEEEE;
+}
+/*========== Card style end here==========*/
 
-/* LowerBody style starts here*/
+/*========== LowerBody style starts here==========*/
+/*==========================================
+	LowerBody Light Mode
+==========================================*/
 .websiteBuilder{
 	display: flex;
 	align-items: center;
@@ -197,8 +278,10 @@ nav{
 .websiteBuilder-text{
 	font-family: 'Lobster',cursive;
 	font-size:52px;
-	color:#247881;
 	text-align: center;
+}
+.websiteBuilder-p-dark{
+	color:#247881;
 }
 .websiteBuilder-text span{
 	position: relative;
@@ -254,9 +337,18 @@ nav{
 	border-radius: 0.5rem;
 	cursor:pointer;
 }
-/* LowerBody style ends here*/
+/*==========================================
+	LowerBody Dark Mode
+==========================================*/
+.websiteBuilder-p-light{
+	color:#EEEEEE;
+}
+/*========== LowerBody style ends here==========*/
 
-/* contactUs style starts here*/
+/*========== contactUs style starts here==========*/
+/*==========================================
+	contactUs Light Mode
+==========================================*/
 .contactUs{
 	height:88%;
 	padding-top:4rem;
@@ -266,6 +358,9 @@ nav{
 	align-items: center;
 	justify-content: space-around;
 	height:70%;
+}
+.contactUsLight{
+	background: #fff;
 }
 .contactUs-form{
 	display:flex;
@@ -289,6 +384,9 @@ nav{
 	font-size: 32px;
 	font-weight: 500;
 	text-decoration: underline;
+}
+.contactUs-span-label-dark{
+	color:#1A1A40;
 }
 .contactUs-form>span>input{
 	width:450px;
@@ -326,12 +424,25 @@ nav{
 	border:1px solid #219F94;
 	border-radius:10px;
 }
+/*==========================================
+	contactUs Dark Mode
+==========================================*/
 
-/* contactUs style ends here */
-/* SignUp style starts here */
+.contactUsDark{
+	background: #1A1A40;
+}
+.contactUs-span-label-dark{
+	color:#EEEEEE;
+}
 
-.signUp{
+/*========== contactUs style ends here ==========*/
+/*========== SignUp style starts here ==========*/
+/*==========================================
+	SignUp Light Mode
+==========================================*/
+.signUpLight{
 	height:88%;
+	background:#fff;
 }
 .signUpBody{
 	height:100%;
@@ -339,11 +450,12 @@ nav{
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	
 }
 .signUpForm{
 	position:relative;
 }
-.circle1{
+/* .circle1{
 	width:150px;
 	height:150px;
 	border-radius:50%;
@@ -362,20 +474,22 @@ nav{
 	position:absolute;
 	bottom:-16%;
 	right:-16%;
-}
+} */
 .signUpFormBody{
 	font-family:"Fira Code";
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	background: #F7F7F7;
-	box-shadow: 8px 8px 16px #bebebe,
-				-8px -8px 16px #fff;
+	box-shadow: 8px 8px 16px 4px #bebebe,
+				-8px -8px 16px 4px #fff;
 	width:420px;
 	height:400px;
 	border-radius:10px;
-	z-index: 2;
+	z-index: 1;
+}
+.signUpFormBodyLight{
+	background: #D9D9D9;
 }
 .signUpFormBody>p{
 	font-size:22px;
@@ -403,6 +517,19 @@ nav{
 	padding:4px;
 	outline: none;
 }
+.signUpButtons{
+	width:50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom:5px;
+}
+.signUpButtons>a{
+	text-decoration: none;
+	color: #22577E;
+	font-size: 1.2rem;
+}
+
 .signUpBtn{
 	width:75px;
 	height:35px;
@@ -426,10 +553,40 @@ nav{
 	width:600px;
 	height:350px;
 }
+.textDark{
+	color:#1A1A40;
+}
+.textDark>a{
+	color:#22577E;
+}
+.textDark>a:hover{
+	border-bottom: 2px solid #22577E;
+}
+/*==========================================
+	SignUp Dark Mode
+==========================================*/
 
-/* SignUp style ends here */
-/* Login style starts here*/
-
+.signUpDark{
+	height:88%;
+	background:#1A1A40;
+}
+.signUpFormBodyDark{
+	background: #7A0BC0;
+}
+.textLight{
+	color:#EEEEEE;
+}
+.textLight>a{
+	color:#EEEEEE;
+}
+.textLight>a:hover{
+	border-bottom: 2px solid #EEEEEE;
+}
+/*========== SignUp style ends here ==========*/
+/*========== Login style starts here==========*/
+/*==========================================
+	Login Light Mode
+==========================================*/
 .login{
 	height:88%;
 }
@@ -440,10 +597,13 @@ nav{
 	align-items: center;
 	justify-content: space-evenly;
 }
+.loginBodyLight{
+	background: #fff;
+}
 .loginForm{
 	position:relative;
 }
-.loginCircle1{
+/* .loginCircle1{
 	width:150px;
 	height:150px;
 	border-radius:50%;
@@ -462,7 +622,7 @@ nav{
 	position:absolute;
 	bottom:-20%;
 	right:-18%;
-}
+} */
 .loginFormBody{
 	font-family:"Fira Code";
 	display:flex;
@@ -526,10 +686,32 @@ nav{
 	width:500px;
 	height:320px;
 }
+.loginTextLight{
+	color:#EEEEEE;
+}
+.loginFormBodyLight{
+	background: #D9D9D9;
+}
+/*==========================================
+	Login Dark Mode
+==========================================*/
 
-/* Login style ends here*/
+.loginBodyDark{
+	background: #1A1A40;
+}
+.loginTextDark{
+	color:#1A1A40;
+}
+.loginFormBodyDark{
+	background: #7A0BC0;
+}
 
-/* Services style starts here*/
+/*========== Login style ends here==========*/
+
+/*========== Services style starts here==========*/
+/*==========================================
+	Services Light Mode
+==========================================*/
 
 .Services{
 	height:88%;
@@ -543,10 +725,22 @@ nav{
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+.servicesBodyLight{
+	background-color: #fff;
+}
+/*==========================================
+	Services Dark Mode
+==========================================*/
+.servicesBodyDark{
+	background-color: #1A1A40;
+}
 
-/* Services style starts here*/
+/*========== Services style starts here==========*/
 
-/* ServicesCard style starts here*/
+/*========== ServicesCard style starts here==========*/
+/*==========================================
+	ServicesCard Light Mode
+==========================================*/
 
 .servicesCard{
 	position:relative;
@@ -556,10 +750,12 @@ nav{
 .servicesCardBody{
 	width:280px;
 	height:260px;
-	background: #EDF5FC;
 	border-radius:10px;
 	box-shadow: 4px 4px 10px #bebebe,
 				-4px -4px 10px #fff;
+}
+.servicesCardBodyLight{
+	background: #EDF5FC;
 }
 .servicesCardImage{
 	width:100%;
@@ -596,14 +792,24 @@ nav{
 .servicesCardText{
 	height:30%;
 	width:100%;
-	color:#38023B;
-}
-.servicesCardText{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 20px;
 	font-weight: 500;
 }
+.servicesCardTextDark{
+	color:#38023B;
+}
+/*==========================================
+	ServicesCard Dark Mode
+==========================================*/
 
-/* ServicesCard style starts here*/
+.servicesCardBodyDark{
+	background: #7A0BC0;
+}
+.servicesCardTextLight{
+	color:#EEEEEE;
+}
+
+/*========== ServicesCard style starts here==========*/

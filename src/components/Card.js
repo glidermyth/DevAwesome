@@ -3,8 +3,8 @@ import priceTag from '../images/price-tag.png';
 
 const Card = (props) =>{
     return(
-        <div className="card">
-            <p>{props.planName}</p>
+        <div className={props.darkMode?"card cardLightMode":"card cardLightMode"}>
+            <p className={props.darkMode?"card-p-light":"card-p-dark"}>{props.planName}</p>
             <div className="price">
                 <img src={priceTag} alt="price-tag"/>
                 <div className="price-text">
@@ -13,7 +13,7 @@ const Card = (props) =>{
                 </div>
             </div>
             <hr/>
-            <div className="card-features">
+            <div className={props.darkMode?"card-features card-features-light":"card-features card-features-dark"}>
                 <ul>
                     <li>{props.cpuCount} vcpu from {props.cpuBrand}</li>
                     <li>{props.ssd}GB ssd storage</li>

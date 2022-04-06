@@ -7,16 +7,16 @@ import smsImg from '../images/messageSenttwo.jpg';
 import appImg from '../images/apps.jpg';
 import webImg from '../images/web.jpg';
 
-const Services = () =>{
+const Services = (props) =>{
     return(
         <div className="Services">
-            <div className='servicesBody'>
-                <ServicesCard cardImg={serverImg} cardText="Best Hosting"/>
-                <ServicesCard cardImg={domainImg} cardText="Domain Service"/>
-                <ServicesCard cardImg={seoImg} cardText="SEO Service"/>
-                <ServicesCard cardImg={smsImg} cardText="Bulk SMS"/>
-                <ServicesCard cardImg={appImg} cardText="App Development"/>
-                <ServicesCard cardImg={webImg} cardText="Web Development"/>
+            <div className={props.darkMode?'servicesBody servicesBodyDark':'servicesBody servicesBodyLight'}>
+                <ServicesCard cardImg={serverImg} cardText="Best Hosting" darkMode={props.darkMode}/>
+                <ServicesCard cardImg={domainImg} cardText="Domain Service" darkMode={props.darkMode}/>
+                <ServicesCard cardImg={seoImg} cardText="SEO Service" darkMode={props.darkMode}/>
+                <ServicesCard cardImg={smsImg} cardText="Bulk SMS" darkMode={props.darkMode}/>
+                <ServicesCard cardImg={appImg} cardText="App Development" darkMode={props.darkMode}/>
+                <ServicesCard cardImg={webImg} cardText="Web Development" darkMode={props.darkMode}/>
             </div>
         </div>
     );
