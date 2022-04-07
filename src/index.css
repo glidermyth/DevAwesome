@@ -414,8 +414,8 @@ nav{
 	box-shadow: 3px 3px 10px #30c0b4,
 				-3px -3px 10px #30c0b4;
 	outline:#219F94;
-	background-color: #219F94;
-	color:#fff;
+	background-color: #C6E2E9;
+	color:#301A4B;
 
 }
 .contactUs-image>img{
@@ -720,11 +720,20 @@ nav{
 	height:100%;
 	width:100%;
 	padding:1rem;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows:auto auto;
+	justify-content: space-evenly;
+}
+/* .servicesBody{
+	height:100%;
+	width:100%;
+	padding:1rem;
 	display: flex;
 	/* align-items: center; */
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
+	/* justify-content: space-around;
+	flex-wrap: wrap; 
+} */
 .servicesBodyLight{
 	background-color: #fff;
 }
